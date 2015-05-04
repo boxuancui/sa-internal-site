@@ -1,9 +1,14 @@
 $(document).ready(function() {
     // two eggs in about section, mouseover event triggers change of text and disappear
+    $("#egg_site_is").show();
+    $("#egg_site_is_not").show();
     $("#egg_site_is").mouseover(function(){$(this).text("I'm kidding, now go back to work! Ciao~").delay(1200).fadeOut('slow');});
     $("#egg_site_is_not").mouseover(function(){$(this).text("There is something called Email if you miss him.").delay(1200).fadeOut('slow');});
-    // click contact will trigger Email and photo disappear
-    $("#egg_mysterious_guy").click(function(){$(this).fadeOut('slow');});
+    // mysterious guy in contact section
+    $("#egg_mysterious_guy").show();
+    $("#egg_mysterious_guy").click( function() {
+        $(this).attr("src", "img/poptocat.png").hide("explode", 1500);
+    });
     // hover delay 5 seconds and removes "img/src" for mysterious guys
     $("#egg_mysterious_guy").hoverIntent({
         over: function(){$(this).attr("src", "");},
