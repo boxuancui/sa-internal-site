@@ -3,7 +3,7 @@ $(document).ready(function() {
     $("body").on("keyup", function(e) {
         var keypress = String.fromCharCode(e.which);
         $("#commands").css("color", "white").append(keypress).show();
-        $("#commands").delay(2000).fadeOut("slow", function(){$(this).empty();});
+        $("#commands").delay(3000).fadeOut("slow", function(){$(this).empty();});
     });
 
     // Email both teams
