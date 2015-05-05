@@ -3,14 +3,12 @@ $(document).ready(function() {
     $("body").on("keyup", function(e) {
         var keypress = String.fromCharCode(e.which);
         $("#commands").css("color", "white").append(keypress).show();
-        $("#commands").delay(2000).fadeOut("slow", function() {
-            $(this).empty();
-        });
+        $("#commands").delay(3000).fadeOut("slow", function(){$(this).empty();});
     });
 
     // Email both teams
     var email_all = new Egg("e,m,a,i,l,a,l,l,enter", function() {
-        window.open("mailto:CustomerKillerWhales@bcg.com;GeoWorkerBees@bcg.com")
+        window.open("mailto:CustomerKillerWhales@bcg.com;GeoWorkerBees@bcg.com", "_top")
     }).listen();
 
     // Request S3 access
@@ -52,5 +50,4 @@ $(document).ready(function() {
     var github_doc = new Egg("g,i,t,h,u,b,d,o,c,enter", function() {
         $("#bcg_github li strong:contains('SA GitHub Overview') a")[0].click()
     }).listen();
-
-})
+});
