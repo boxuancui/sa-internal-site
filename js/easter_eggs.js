@@ -3,7 +3,7 @@ $(document).ready(function() {
     $("#egg_site_is").show();
     $("#egg_site_is_not").show();
     $("#egg_site_is").mouseover(function(){$(this).text("I'm kidding, now go back to work! Ciao~").delay(1200).fadeOut('slow');});
-    $("#egg_site_is_not").mouseover(function(){$(this).text("There is something called Email if you miss him.").delay(1200).fadeOut('slow');});
+    $("#egg_site_is_not").mouseover(function(){$(this).html("Try typing <code>summonbo</code> to summon him").delay(1200).fadeOut('slow');});
 
     // mysterious guy in contact section
     $("#egg_mysterious_guy").show();
